@@ -1,0 +1,19 @@
+const logText = `
+
+2025-03-14T09:00:02Z auth-service INFO  Handling login request for user_id=12345
+
+2025-03-14T09:00:05Z auth-service ERROR Login failed: DB timeout after 2000ms (SELECT * FROM users ...)
+
+2025-03-14T09:00:08Z auth-service WARN  Slow query detected: 1900ms on connection pool (db-primary)
+
+2025-03-14T09:00:11Z auth-service ERROR Login failed: could not get connection from pool (timeout)
+
+2025-03-14T09:00:16Z auth-service ERROR Login failed: DB timeout after 2000ms (SELECT * FROM users ...)
+
+2025-03-14T09:00:20Z auth-service WARN  Connection pool size exhausted for db-primary
+
+`;
+// SYMPTOM: Describe in simple terms what these logs suggest about auth-service behaviour.
+// CAUSES: List possible causes for repeated DB timeouts and pool exhaustion.
+// GAPS: Point out what important information might be missing from these logs.
+// NEXT STEPS: Suggest what a platform engineer should check before changing config or scaling.
